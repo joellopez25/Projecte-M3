@@ -7,7 +7,7 @@ public class ex14 {
 
         int [] llista1 = {2,5,4,3,7};
 
-        int resultat
+
     }
 }
 
