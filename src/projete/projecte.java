@@ -25,11 +25,11 @@ public class projecte {
             System.out.println("Vols introduir malalts?(si/no)");
             String resposta = in.next();
             while (resposta.equals("si")) {
-            System.out.println("A quina posició vols ficar malalt?");
-            int x = in.nextInt();
-            int y = in.nextInt();
-            System.out.println("Numero de personas malaltas");
-            int personas = in.nextInt();
+                System.out.println("A quina posició vols ficar malalt?");
+                int x = in.nextInt();
+                int y = in.nextInt();
+                System.out.println("Numero de personas malaltas");
+                int personas = in.nextInt();
                 for (int j = 0; j < files; j++) {
                     System.out.println();
                     for (int a = 0; a < columnes; a++) {
@@ -122,29 +122,44 @@ public class projecte {
                                 System.out.print(taulell[s][r] + " ");
                             }
                         }
-                        System.out.println("que vols un percentatje random o un percentatje especific?(random/especific)");
-                        randomespecific = in.next();
                     }
-                    
-                        if (randomespecific.equals("especific")) {
-                            System.out.println("en quina posicio vols curar malalts?");
-                            int x = in.nextInt();
-                            int y = in.nextInt();
-                            float percentatje = in.nextFloat();
-                            for (int h = 0; h < files; h++) {
-                                System.out.println();
-                                for (int l = 0; l < columnes; l++) {
-                                    if (taulell[x][y] == taulell[h][l]) {
-                                        float calcul = (taulell[h][l] * percentatje) / 100;
-                                        float curats = taulell[h][l] - calcul;
-                                        taulell[h][l] = Math.round(curats);
-                                    }
-                                    System.out.print(taulell[h][l] + " ");
+
+                    if (randomespecific.equals("especific")) {
+                        System.out.println("en quina posicio vols curar malalts?");
+                        int x = in.nextInt();
+                        int y = in.nextInt();
+                        System.out.println("Escriu el percentatje:");
+                        float percentatje = in.nextFloat();
+                        for (int h = 0; h < files; h++) {
+                            System.out.println();
+                            for (int l = 0; l < columnes; l++) {
+                                if (taulell[x][y] == taulell[h][l]) {
+                                    float calcul = (taulell[h][l] * percentatje) / 100;
+                                    float curats = taulell[h][l] - calcul;
+                                    taulell[h][l] = Math.round(curats);
                                 }
+                                System.out.print(taulell[h][l] + " ");
                             }
                         }
-                    System.out.println("que vols un percentatje random o un percentatje especific?(random/especific)");
-                    randomespecific = in.next();
+                    }
+
+                }
+                if (valor.equals("concret")) {
+                    System.out.println("en quina posicio vols curar malalts?");
+                    int x = in.nextInt();
+                    int y = in.nextInt();
+                    System.out.println("Introdueix el valor concret que desitji(Sempre menor que el que hagi a la casella)");
+                    int valorconcret = in.nextInt();
+                    for (int u = 0; u < files; u++) {
+                        System.out.println();
+                        for (int t = 0; t < columnes; t++) {
+                            if (taulell[x][y] == taulell[u][t] && valorconcret <= taulell[u][t]) {
+                                int resta = taulell[u][t] - valorconcret;
+                                taulell[u][t] = resta;
+                            }
+                            System.out.print(taulell[u][t] + " ");
+                        }
+                    }
                 }
             }
         }
@@ -215,4 +230,3 @@ public class projecte {
         }
     }
 }
-
