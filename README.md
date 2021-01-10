@@ -9,7 +9,7 @@
   6.
   7.
   8.
-  
+  -
 -Explicació de decisions de disseny:
   -primer de tot em agut de crear dos variables que es diuen files i columnes, per desprès utilitzar-les en un for per poder anar posició per posició del taulell.
   -desprès em agut de crear un array per poder emmagatzemar les posicions del taulell que va regit per files i columnes.
