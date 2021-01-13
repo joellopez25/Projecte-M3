@@ -59,6 +59,17 @@ Joel:S'ha encarregat d'ajudar al company quan aquest ha tingut un problema i no 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Jocs de prova:
 -
+-Cas extrem de Desplaçar malalts:
+En aquest cas he posat unes cordenades que que tenen joc en cap posició del taulell i en comtes de sortirme el error de Out of Bounds em surt un misatje de que esta fora de rang i haig de tornar a agafar una opció
+![Captura de pantalla 2021-01-13 195156](https://user-images.githubusercontent.com/76974332/104496861-d3867280-55d9-11eb-91e0-e5212cf588a9.png)
+
+-Cas normmal de Desplaçar malalts:
+En aquest cas he posat unes coordenadas que coincideixen amb la posició del taulell i he desplaçat 20 malalts a la dreta
+![cas normal](https://user-images.githubusercontent.com/76974332/104498596-311bbe80-55dc-11eb-9b8c-5b15726330a6.png)
+
+-Cas extrem de Desplaçar malalts:
+En aquest cas he posat unes coordenadas que coincideixen amb la posició del taulell peró com he desplaçat mes malalts dels que hi havia a la posició me ha posat el misatje que el valor es major i haig de tornar a agafar una opció 
+![Cas extrem](https://user-images.githubusercontent.com/76974332/104499069-d33ba680-55dc-11eb-8a65-04bf13146c85.png)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Propostes de millora i Control d'errors:
@@ -68,3 +79,4 @@ La primera millora seria fer l'apartat de les posicions bloquejades(x), ja que n
 La segona protesta de millora seria simplificar el codi.
 
 Control d'errors:
+
