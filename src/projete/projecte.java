@@ -291,7 +291,7 @@ public class projecte {
                 int cordenadax = in.nextInt();
                 System.out.println("Quants malalts vols moure?(el numero ha desplaçar no pot ser superior al número de malalts existents en la casella d'origen.)");
                 valor = in.nextInt();
-                if ((cordenaday >= 0 || cordenadax >= 0) && (cordenaday < columnes || cordenadax < files)) {
+                if ((cordenaday >= 0 || cordenadax >= 0) && (cordenaday < columnes || cordenadax < files) && (valor<=taulell[cordenaday][cordenadax])) {
                     sumaescapolats = sumaescapolats + valor;
                     taulell[cordenaday][cordenadax] = taulell[cordenaday][cordenadax] - valor;
                     System.out.println("per desplaçar malalts nomes pots utilitzar les seguents lletres : q (dalt esquerra), w (dalt mig), e (dalt dreta), " +
@@ -328,7 +328,7 @@ public class projecte {
                     /* Aixo es per si l'usuari introdueix una posició que no esta al taullel no aparegui el misatge de OutOfBounds i se me pari el programa*/
                 } else {
                     escapats = escapats + valor;
-                    System.out.println("La posició ficada resulta fora del taulell,  se li ha perdut la pista al malat o malalts.");
+                    System.out.println("La posició ficada resulta fora del taulell o el valor introduit es major que el que hi havia en la posició  se li ha perdut la pista al malat o malalts.");
                 }
                 System.out.println();
                 System.out.println("Menu:");
