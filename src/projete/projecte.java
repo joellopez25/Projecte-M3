@@ -93,7 +93,7 @@ public class projecte {
                 System.out.println("x:");
                 int x = in.nextInt();
                 if (y < columnes && x < files) {
-                    System.out.println("Numero de personas malaltas");
+                    System.out.println("Numero de personas malaltas:");
                     int personas = in.nextInt();
                     for (int j = 0; j < columnes; j++) {
                         System.out.println();
@@ -369,7 +369,7 @@ public class projecte {
             if (numeros.equals("7")) {
                 System.out.println();
                 System.out.println("Has sortit del joc");
-                System.out.println("Vols tornar-lo a jugar?(si/no)");
+                System.out.println("Vols tornar-lo a jugar?(si)/(no)");
                 String resposta = in.next();
                 if (resposta.equals("si")) {
                     System.out.println();
