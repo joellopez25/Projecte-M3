@@ -1,4 +1,4 @@
-# prrr
+# projecte M3
 -Esquema principal del projecte:
   1. Primer l'usuari ha de crear un taulell buit(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un 0) o crear un taulell que ja tingui malalts(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un numero random del 0 al 9, Math.random) .
   
