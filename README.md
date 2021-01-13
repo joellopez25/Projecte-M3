@@ -79,4 +79,5 @@ La primera millora seria fer l'apartat de les posicions bloquejades(x), ja que n
 La segona protesta de millora seria simplificar el codi.
 
 Control d'errors:
-
+En els casos on l'usuari a da possar les cordenadas on vol afegir un malalt, curar, desplaçar etc. hem fet que les posicions que posa el usuari que estan fora del rang(fora del taulell) printem un misatge dient que la posicio que a posat el usuari esta fora de rang, i li turnem a demanar una opció del menu, en comptes de que apereixi un error de java i es pari el programa.
+i en casos com per exemple el de desplaçar malalts si el valor que introdueix el usuari es major que el que hi ha a la posició apareixera un missatge dient que el valor concret es major, i li turnem a demanar una opció del menu, en comptes de que apereixi un error de java i es pari el programa.
