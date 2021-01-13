@@ -1,6 +1,7 @@
 # projecte M3
 -Esquema principal del projecte:
-  1. Primer l'usuari ha de crear un taulell buit(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un 0) o crear un taulell que ja tingui malalts(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un numero random del 0 al 9, Math.random) .
+
+  1. Primer l'usuari ha de crear un taulell buit(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un 0) o crear un taulell que ja tingui malalts(tindrem una array delimitada per columnes i files, i un for per les columnes que tindra un altre dins per les filas i printarem per cada posicio un numero random del 0 al 50, Math.random) .
   
   2. Al usuari se li proporcionara un menu on pot triar la opció que vulgui, on li demanarem un numero i segons aquest numero escollira una opció o una altre, cada opcio estara enmagatzemada en un while.
   
@@ -13,9 +14,11 @@
   6. Si posa el numero 5, agafara la opció de desplaçar malalts, on primer li pregunten quina posició(y,x) de la taula vol escollir per desplaçar els malalts, a continuacio amb una varible int, demanarem cuants malalts de la posició vol desplaçar, sempre menor que els malalts que hi han a la posició, per ultim li demana que posi una de les següents lletres:q (dalt esquerra), w (dalt mig), e (dalt dreta), a (esquerra mig), d (dreta mig), z (baix esquerra), x (baix mig), c (baix dreta), segons la lletra que posi la a la 
   x = files , y = columnes, li restarem o sumaren la posició, en cas de la y si es dalt = y-1 i si es baix = y+1 i si es esquerra o dreta es queda igual i a la inversa amb la x,
   si es esquerra = x-1 i si es dreta= x+1, si es dalt o baix es queda igual, tota aixo en un if de que si la lletra que introdueixes es igual a alguna de les que hi hagi en el lletra.equals(), la posició cambiara respecte la lletra
-  7.
-  8.
-  9.
+  
+7. Si poses el numero 6, mostrarà tota la informació del taulell. el primer que sortirà serà el total de malalts, desprès et donarà la informació dels malalts que no hi han complit el confinament, també et dirà el total de la gent que se ha escapat del confinament i per últim et proporcionarà la informació de tots els malalts que estan curats.
+
+8. Per últim si poses el numero 7, sortirà un missatge el qual et dirà que és sortit del joc i desprès et preguntarà si vols jugar un altre cop o no. En el cas que vulguis tornar a jugar has de dir-li que (si) i et sortirà un altre cop el menú amb les opcions corresponents. En cas que diguis que (no) es finalitzarà el joc amb un missatge d'acomiadament
+ 
   
 -Explicació de decisions de disseny:
 
@@ -28,4 +31,5 @@
   -Per curar malalts en el cas que sigui globalment solament pot ser percentatges, llavors hem hagut de fer dos if al qual si era random em fet un math.random de l'1 al 100,
     desprès amb aquest percentatge hem de fer el càlcul de transmissió de virus per cada posició. Aquest càlcul l'hem hagut d'igual a cada posició del taulell i en cas que el       percentatge sigui específic hem hagut de fer el mateix però en comptes que el percentatge sigui random en aquest cas l'usuari a de introduirlo a la consola. i en cas que no     sigui  globalment sinó posició concreta farem el mateix amb els percentatges però en comptes de fer-ho amb totes les posicions ho farem amb les que l'usuari introdueixi a la     consola: això un farem fem dos variables(x,y) i aquestes dos variables les introduirem a l'arry taulell, i desprès en un if posarem que si les dos arrays
     (taulell[x][y]==taulell[i][j]), així podem saber a quina posició vol curar al malalt, desprès farem el mateix càlcul com el globalment.
-  
+
+-Per desplaçar malalts, el primer que hem fet és d'emanar les coordenades i el número de malalts que volem desplaçar. El número de malalts té que sé inferior o igual que el taulell perquè el codi et deixi desplaçar malalts. una vegada introduit els malalts que vols desplaçar y les cordenadas et demanara les seguents lletres: q (dalt esquerra), w (dalt mig), e (dalt dreta),a (esquerra mig), d (dreta mig), z (baix esquerra), x (baix mig), c (baix dreta). Cada lletra que tu damanis cambia una posicio en cocncreta, si tu introdueixes una lletra que no es la demanada 
